@@ -8,12 +8,10 @@ namespace KartGame.KartSystems {
         public string backward;
         public string left;
         public string right;
+        public float valY=0;
+        public float valX=0;
 
         public override Vector2 GenerateInput() {
-
-            int valY =0;
-            int valX=0;
-
             if (Input.GetKey(forward))
             {
                 valY=1;
@@ -30,10 +28,13 @@ namespace KartGame.KartSystems {
             {
                 valX=-1;
             }
-            return new Vector2 {
+            Vector2 vector = new Vector2 {
                 x = valX,
                 y = valY
             };
+            valX=0;
+            valY=0;
+            return vector;
         }
     }
 }
