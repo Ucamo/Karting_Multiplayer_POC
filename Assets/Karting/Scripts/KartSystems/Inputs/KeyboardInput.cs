@@ -8,8 +8,8 @@ namespace KartGame.KartSystems {
         public string backward;
         public string left;
         public string right;
-        public float valY=0;
-        public float valX=0;
+        float valY=0;
+        float valX=0;
 
         public override Vector2 GenerateInput() {
             if (Input.GetKey(forward))
