@@ -54,8 +54,8 @@ public class FollowTrackController : MonoBehaviour
         float dist = Vector3.Distance(targetPosition, currentPosition);
 
         if(dist<=0.5){
-            if(currentTarget==37){
-                currentTarget=-1;
+            if(currentTarget==37){ //This number is the total number of path_piece objects in the scene.
+                currentTarget=-1; //If it's -1 the next number will be 0, which will start with the first path_piece again, making a new lap.
             }
             currentTarget++;
         }     
